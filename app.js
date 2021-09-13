@@ -35,11 +35,11 @@ app.post("/", function(req,res){
         };
         const jsonData = JSON.stringify(data);
         
-        const url = "https://us5.api.mailchimp.com/3.0/lists/18098d5021"
+        const url = "https://us5.api.mailchimp.com/3.0/lists/----"
 
         const options = {
             method: "POST",
-            auth: "-------"
+            auth: "-------"//for security reasons I removed the API key and lists ID
         };
 
         const request = https.request(url, options, function(response) {
@@ -70,8 +70,5 @@ app.listen(process.env.PORT || 3000, function (){
 });
 
 
-//API key
-// ea0344b0cfb46fd0ff6d8a0f1ac4940f-us5  this las number is the X in usX
 
-// audience list-id 18098d5021
 
